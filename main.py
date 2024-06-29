@@ -198,11 +198,6 @@ def admin():
             with st.expander("View All Order Data"):
                 order_clean_df = pd.DataFrame(order_result, columns=["Name", "Items","Qty" ,"ID"])
                 st.dataframe(order_clean_df)
-    elif choice == "About":
-        st.subheader("DBMS Mini Project")
-        st.subheader("By Aditi (226), Anweasha (235) & Vijay (239)")
-
-
 def getauthenicate(username, password):
     #print("Auth")
     c.execute('SELECT C_Password FROM Customers WHERE C_Name = ?', (username,))
